@@ -1,29 +1,21 @@
-# ASP1RIN PRIVATE PROJECT
+# Q.lua: Lightweight Ballistics Control Script
 
-This repository contains both the PC version (EXE) and the Mobile version (LUA) of the ASP1RIN PRIVATE tool.
+Q.lua is a lightweight script designed to operate through in-game script engines or external injectors. It focuses on controlling core variables of ballistics logic.
 
-## ASP1RIN MOBILE (LUA)
-A lightweight and efficient mobile script for enhanced aim and recoil control.
+## Key Features
+- Language: Lua 5.1/5.4 compatible
+- Focus: Performance & Simplicity
+- Implemented Modules:
+    - Zero Spread: Fixing bullet trajectory variables to their minimum values.
+    - Recoil Suppression: Adjusting vertical and horizontal recoil coefficients to zero.
 
-### Features
-* **Perfect Aim**: Zero spread regardless of movement.
-* **No Recoil**: Eliminates camera shaking and weapon kickback.
-* **Lightweight**: Minimal impact on game performance.
+## How it Works
+This script functions by searching for memory address offsets referenced by the game engine and monitoring/fixing the values at those addresses in real-time.
 
-### Requirements
-* **GameGuardian** (Latest version recommended)
-* **Root access** or a **Virtual Environment** (Vmos, Parallel Space, etc.)
-* **MilkChoco** game client
+```lua
+-- Example Snippet
+function clearRecoil()
+    -- Logic for searching and modifying recoil offsets within a specific memory range
+end
 
-### How to Use
-1. Download the `Q.lua` file to your device.
-2. Launch GameGuardian and select the **MilkChoco** process.
-3. Tap the **Execute Script** icon (the 'Play' button ▶️) in GameGuardian.
-4. Select the `Q.lua` file and tap **Execute**.
-5. Wait for the toast message: `"ASP1RIN PROJECT LOADED"`.
-
-## Disclaimer
-This software is provided for educational and research purposes only. The developer assumes no liability for account bans or any legal issues arising from the use of this tool. Use it at your own risk.
-
-## Credits
-* Developed by **ASP1RIN**
+## made by asp1-rin
